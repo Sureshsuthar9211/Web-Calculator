@@ -35,6 +35,7 @@ input {
     border-radius: 10px;
     font-size: 40px;
     text-align: right;
+    color: #fff;
 }
 
 input::placeholder {
