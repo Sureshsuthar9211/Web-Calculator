@@ -9,8 +9,20 @@ let array = Array.from(buttons)
 array.forEach(
     button => {
         button.addEventListener('click', (e) => {
-            string += button.innerText
-            input.value = string
+            if (button.innerText == '=') {
+                string = eval(string); //////////////////////////////
+                input.value = string;
+
+            } else if (button.innerText == 'AC') {
+                string = "";
+                input.value = string;
+            } else if (button.innerText == 'C') {
+                string = string.substring(0, string.length - 1);
+                input.value = string;
+            } else {
+                string += button.innerText;
+                input.value = string;
+            }
         })
     }
 )
